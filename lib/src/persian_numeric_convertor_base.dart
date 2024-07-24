@@ -42,6 +42,7 @@ class PersianNumericConvertor {
   }
 
   static String convertStringRialToTomanCurrency(String number) {
+    if (number.isEmpty) return "";
     final convertedNumber = num.parse(number);
     return _convertToPersianCurrency(convertedNumber);
   }
