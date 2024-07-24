@@ -1,6 +1,3 @@
-// TODO: Put public facing types in this file.
-
-/// Checks if you are awesome. Spoiler: you are.
 class PersianNumericConvertor {
   static const List<String> _units = [
     '',
@@ -11,10 +8,7 @@ class PersianNumericConvertor {
   ];
 
   static String _convertToPersianCurrency(num number) {
-    if (number < 0) {
-      throw ArgumentError('Number must be non-negative');
-    }
-
+    if("$number".length < 2) return "$number ریال";
     final rialPart = number % 10;
     final tomanPart = number ~/ 10;
     final tomanString = tomanPart.toString();
@@ -48,6 +42,7 @@ class PersianNumericConvertor {
   }
 
   static String convertRialToTomanCurrency(num number) {
+    if (number < 0) return "";
     return _convertToPersianCurrency(number);
   }
 }

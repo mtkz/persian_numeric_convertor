@@ -1,6 +1,6 @@
 name: persian_numeric_convertor
 description: simple convert to convert Rial number to Toman.
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/mtkz/persian_numeric_convertor
 
 environment:
